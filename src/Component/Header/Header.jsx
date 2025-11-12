@@ -53,19 +53,19 @@ const Header = () => {
       // });
 
       // Simulating API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // Clear localStorage
-      localStorage.removeItem('userName');
-      localStorage.removeItem('userRole');
-      localStorage.removeItem('authToken');
+      // // Clear localStorage
+      // localStorage.removeItem('userName');
+      // localStorage.removeItem('userRole');
+      // localStorage.removeItem('authToken');
 
-      toast.success('Logged out successfully!', { id: 'logout' });
+      // toast.success('Logged out successfully!', { id: 'logout' });
 
-      // Redirect to login page
-      setTimeout(() => {
-        window.location.href = '/login';
-      }, 1000);
+      // // Redirect to login page
+      // setTimeout(() => {
+      //   window.location.href = '/login';
+      // }, 1000);
     } catch (error) {
       toast.error('Logout failed. Please try again.', { id: 'logout' });
       console.error('Logout error:', error);
@@ -73,7 +73,7 @@ const Header = () => {
   };
 
   const handleSearchClick = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     setSearchModalOpen(true);
   };
 
@@ -83,7 +83,7 @@ const Header = () => {
   };
 
   const handleProfileClick = () => {
-    toast.success('Opening profile...');
+    // toast.success('Opening profile...');
     setDropdownOpen(false);
   };
 
