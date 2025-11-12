@@ -148,11 +148,7 @@ const AddCustomer = () => {
                                                     message: 'Please enter a valid 10-digit number'
                                                 }
                                             })}
-                                            className={styles.input}
-                                            style={{
-                                                width: "75%",
-                                                marginLeft: "10px"
-                                            }}
+                                            className={`${styles.input} ${styles.contact}`}
                                         />
                                         {errors.contact && <span className={styles.error}>{errors.contact.message}</span>}
                                     </div>
@@ -166,11 +162,7 @@ const AddCustomer = () => {
                                                     message: 'Please enter a valid 10-digit number'
                                                 }
                                             })}
-                                            className={styles.input}
-                                            style={{
-                                                width: "63.8%",
-                                                marginLeft: "10px"
-                                            }}
+                                            className={`${styles.input} ${styles.alternateContact}`}
                                         />
                                         {errors.alternateContact && <span className={styles.error}>{errors.alternateContact.message}</span>}
                                     </div>

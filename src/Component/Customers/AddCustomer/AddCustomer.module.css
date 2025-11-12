@@ -183,6 +183,16 @@
 
 }
 
+.contact {
+    width: 75% !important;
+    margin-left: 10px;
+}
+
+.alternateContact {
+    width: 63.8% !important;
+    margin-left: 10px;
+}
+
 .select {
     height: 40px;
     background-color: var(--bg-color);
@@ -518,6 +528,16 @@
         font-size: 13px;
     }
 
+    .contact {
+        width: 70% !important;
+        margin-left: 10px;
+    }
+
+    .alternateContact {
+        width: 58.8% !important;
+        margin-left: 10px;
+    }
+
     .collapsedRight {
         gap: 50px;
     }
@@ -578,7 +598,7 @@
     }
 
     .loanreq {
-        width: 69% !important;
+        width: 68% !important;
         margin-left: 10px;
     }
 
