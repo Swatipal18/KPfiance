@@ -413,12 +413,12 @@ const Loans = () => {
                                             {customer.status}
                                         </span>
                                     </td>
-                                    <td>
+                                    {/* <td>
                                         <BsInfo
                                             onClick={() => handleDetail(customer.id)}
                                             style={{ cursor: 'pointer', fontSize: '20px' }}
                                         />
-                                    </td>
+                                    </td> */}
                                 </tr>
                             ))
                         )}
