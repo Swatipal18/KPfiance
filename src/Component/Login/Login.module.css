@@ -1,0 +1,306 @@
+.loginWrapper {
+  background: url("/images/background graphics.png") no-repeat center center;
+  background-color: #D4E9FF;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.loginBox {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.loginBox h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+}
+
+.loginBox label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.loginBox input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginBox input:focus {
+  outline: none;
+  border-color: #80BDFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.loginBox button {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 14px;
+  background-color: #3c84d0;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.loginBox button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper input {
+  width: 100%;
+  padding-right: 35px;
+  /* space for eye icon */
+}
+
+.eyeIcon {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+
+/* Change Password Link */
+.changePasswordLink {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.changePasswordLink span {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.changePasswordLink span:hover {
+  color: #0056b3;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.closeIcon {
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.closeIcon:hover {
+  color: #333;
+}
+
+/* Modal Form Styles */
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContent label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.modalContent input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.modalContent input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Modal Buttons */
+.modalButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #999;
+}
+
+.changeButton {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.changeButton:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.cancelButton:disabled,
+.changeButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Password Wrapper for Modal */
+.modalContent .passwordWrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.modalContent .passwordWrapper input {
+  width: 100%;
+  padding-right: 40px;
+  margin-bottom: 0;
+}
+
+.modalContent .eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.modalContent .eyeIcon:hover {
+  color: #333;
+}
+
+/* Error styles for modal */
+.modalContent .error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-bottom: 12px;
+  margin-top: -4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .modalContent {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .modalButtons {
+    flex-direction: column;
+  }
+  
+  .cancelButton,
+  .changeButton {
+    width: 100%;
+  }
+}

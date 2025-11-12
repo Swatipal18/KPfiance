@@ -1,0 +1,2042 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 27px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    border-top: 1px solid #e5e7eb;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 120px !important;
+    padding: 12px 24px;
+    background-color: var(--bg-color);
+    border: 0.5px solid rgba(115, 119, 145, 1) !important;
+    border-radius: 16px;
+    color: var(--light-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+    line-height: 100%;
+}
+
+.backButton:hover {
+    background-color: #f5f5f5;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 16px;
+}
+
+.draftButton,
+.saveButton,
+.generateButton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 100%;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.draftButton {
+    padding: 12px 12px !important;
+    width: 120px;
+    background-color: var(--bg-color);
+    color: var(--light-text-color);
+    border: 0.5px solid rgba(115, 119, 145, 1);
+}
+
+.draftButton:hover {
+    background-color: #f5f5f5;
+}
+
+.saveButton {
+    background-color: var(--btn-color);
+    color: var(--bg-color, #ffffff) !important;
+    padding: 12px 12px !important;
+    width: 120px;
+}
+
+.generateButton {
+    background-color: var(--diabled-btn-bg);
+    color: var(--bg-color, #ffffff) !important;
+    padding: 10px 14px !important;
+    width: 190px;
+
+}
+
+.generateButton:hover {
+    background-color: #7a7ee4;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section {
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    border: 0.5px solid rgba(115, 119, 145, 0.5);
+    overflow: hidden;
+    /* height: 390px; */
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(115, 119, 145, 0.5);
+    padding: 10px 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sectionTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #000000;
+}
+
+.toggleIcon {
+    font-size: 22px;
+    color: var(--light-text-color);
+    font-weight: 500;
+}
+
+.sectionContent {
+    padding: 15px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formRow {
+    display: flex;
+    gap: 10px;
+
+}
+
+.formRows {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 90% !important;
+    margin-left: -15px;
+}
+
+.formRowes {
+    padding-top: 10rem;
+    margin-left: -5px;
+    width: 20px !important;
+}
+
+.formRowess {
+    padding-top: 7.3rem !important;
+    margin-left: -5px;
+    width: 20px !important;
+}
+
+.formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.label {
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.input {
+    height: 40px;
+    padding: 0 10px;
+    border: 0.5px solid rgba(115, 119, 145, 1);
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.2s;
+    font-family: inherit;
+
+}
+
+.select {
+    height: 40px;
+    background-color: var(--bg-color);
+    padding: 0 10px;
+    border: 0.5px solid rgba(115, 119, 145, 1);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 100%;
+    transition: all 0.2s;
+    font-family: inherit;
+
+}
+
+.textarea {
+    padding: 0 10px;
+    border: 0.5px solid rgba(115, 119, 145, 1);
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--btn-color);
+    box-shadow: 0 0 0 3px rgba(91, 95, 216, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.occupationType {
+    width: 40% !important;
+    margin-left: 10px;
+}
+
+.companyName {
+    width: 65% !important;
+    margin-left: 10px;
+}
+
+.monthlyIncome {
+    width: 45% !important;
+    margin-left: 10px;
+}
+
+.companyAddress {
+    width: 87% !important;
+    margin-left: 10px;
+}
+
+.collateralType {
+    width: 65% !important;
+    margin-left: 10px;
+}
+
+.lab {
+    margin-left: -100px;
+}
+
+.accountType {
+    width: 50% !important;
+    margin-left: 10px;
+}
+
+.fullName {
+    width: 78% !important;
+    margin-left: 10px;
+}
+
+.accountNumber {
+    width: 63% !important;
+    margin-left: 10px;
+}
+
+.ifscCode {
+    width: 80% !important;
+    margin-left: 10px;
+}
+
+.bankName {
+    width: 73% !important;
+    margin-left: 10px;
+}
+
+.formActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.saveInlineButton {
+
+    padding: 10px 32px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.exportInlineButton {
+    padding: 10px 32px;
+    background-color: var(--btn-color);
+    color: white;
+    width: 143px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.saveInlineButton:hover {
+    background-color: #4a4ec7;
+}
+
+.resetButton {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.resetButton:hover {
+    background-color: #f5f5f5;
+}
+
+.resetIcon {
+    font-size: 18px;
+    color: #666;
+}
+
+.collapsedSection {
+    background-color: var(--bg-color);
+    height: 50px;
+    border-radius: 16px;
+    border: 0.5px solid rgba(115, 119, 145, 0.5);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.collapsedSection:hover {
+    background-color: #fafafa;
+}
+
+.collapsedTitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #000000;
+}
+
+.collapsedRight {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.statusPending,
+.statusComplete {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+
+}
+
+.statusPending {
+    color: var(--notification-color);
+}
+
+.statusComplete {
+    color: var(--text-green);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-left: 10px;
+    display: block;
+    margin-top: 4px;
+}
+
+.loanId {
+    width: 33% !important;
+    margin-left: 10px;
+}
+
+.loanreq {
+    width: 71% !important;
+    margin-left: 10px;
+}
+
+.interestType {
+    width: 60%;
+    margin-left: 10px;
+}
+
+.interestRate {
+    width: 52%;
+    margin-left: 10px;
+}
+
+.tenureType {
+    width: 60%;
+    margin-left: 10px;
+}
+
+.tenure {
+    width: 75%;
+    margin-left: 10px;
+}
+
+.startDate {
+    width: 50%;
+    margin-left: 10px;
+}
+
+.endDate {
+    width: 50%;
+    margin-left: 10px;
+}
+
+.emiDate {
+    width: 50%;
+    margin-left: 10px;
+}
+
+/* loan emiCalculator */
+.emiCalculator {
+    width: 100% !important;
+    padding: 20px;
+    border-top: 0.5px solid rgba(115, 119, 145, 0.5);
+    background-color: var(--bg-color);
+}
+
+.emiCalculatorContent {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.emiCalculatorContents {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.emiCalculatorAmount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.emiCalculatorLabel {
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #000000;
+}
+
+.emiCalculatorValue {
+    padding: 14px 14px;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: var(--btn-color);
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* 1400px Screen */
+@media (max-width: 1400px) {
+    .container {
+        max-width: 100%;
+        padding: 24px;
+    }
+
+    .header {
+        margin-bottom: 25px;
+        gap: 16px;
+    }
+
+    .headerButtons {
+        gap: 14px;
+    }
+
+    .backButton {
+        width: 110px !important;
+        padding: 11px 20px;
+        font-size: 15px;
+        gap: 14px;
+    }
+
+    .draftButton,
+    .saveButton {
+        width: 110px;
+        padding: 11px 10px !important;
+        font-size: 13px;
+    }
+
+    .generateButton {
+        width: 180px;
+        padding: 9px 12px !important;
+        font-size: 13px;
+    }
+
+    .collapsedRight {
+        gap: 50px;
+    }
+
+    .fullName {
+        width: 76% !important;
+        margin-left: 10px;
+    }
+
+    .accountNumber {
+        width: 55% !important;
+        margin-left: 10px;
+    }
+
+    .ifscCode {
+        width: 80% !important;
+        margin-left: 10px;
+    }
+
+    .bankName {
+        width: 70% !important;
+        margin-left: 10px;
+    }
+
+    .occupationType {
+        width: 40% !important;
+        margin-left: 10px;
+    }
+
+    .companyName {
+        width: 62.4% !important;
+        margin-left: 10px;
+    }
+
+    .monthlyIncome {
+        width: 45% !important;
+        margin-left: 10px;
+    }
+
+    .companyAddress {
+        width: 85.5% !important;
+        margin-left: 10px;
+    }
+
+    .collateralType {
+        width: 65% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 59.5% !important;
+        margin-left: 10px;
+    }
+
+    .loanId {
+        width: 33% !important;
+        margin-left: 10px;
+    }
+
+    .loanreq {
+        width: 69% !important;
+        margin-left: 10px;
+    }
+
+    .interestType {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .interestRate {
+        width: 45%;
+        margin-left: 10px;
+    }
+
+    .tenureType {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .tenure {
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    .startDate {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .endDate {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .emiDate {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    /* loan emiCalculator */
+    .emiCalculator {
+        width: 100% !important;
+        padding: 20px;
+        border-top: 0.5px solid rgba(115, 119, 145, 0.5);
+        background-color: var(--bg-color);
+    }
+
+    .emiCalculatorContent {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .emiCalculatorContents {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .emiCalculatorAmount {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .emiCalculatorLabel {
+        font-size: 14px;
+        line-height: 100%;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .emiCalculatorValue {
+        padding: 14px 14px;
+        gap: 10px;
+        border-radius: 10px;
+        background-color: var(--btn-color);
+        font-size: 14px;
+        line-height: 100%;
+        font-weight: 600;
+        color: var(--bg-color);
+    }
+}
+
+/* 1200px Screen */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        margin-bottom: 22px;
+        gap: 14px;
+    }
+
+    .headerButtons {
+        gap: 12px;
+    }
+
+    .backButton {
+        width: 100px !important;
+        padding: 10px 18px;
+        font-size: 14px;
+        gap: 12px;
+        border-radius: 14px;
+    }
+
+    .draftButton,
+    .saveButton {
+        width: 100px;
+        padding: 10px 8px !important;
+        font-size: 12px;
+        border-radius: 14px;
+    }
+
+    .generateButton {
+        width: 170px;
+        padding: 8px 10px !important;
+        font-size: 12px;
+        border-radius: 14px;
+    }
+
+    .section {
+        border-radius: 14px;
+    }
+
+    .sectionHeader {
+        padding: 9px 20px;
+    }
+
+    .sectionTitle {
+        font-size: 15px;
+    }
+
+    .toggleIcon {
+        font-size: 20px;
+    }
+
+    .sectionContent {
+        padding: 14px 20px 20px 20px;
+        gap: 18px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .input,
+    .select {
+        height: 38px;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+
+    .occupationType {
+        width: 40% !important;
+        margin-left: 10px;
+    }
+
+    .companyName {
+        width: 57.5% !important;
+        margin-left: 10px;
+    }
+
+    .monthlyIncome {
+        width: 45% !important;
+        margin-left: 10px;
+    }
+
+    .companyAddress {
+        width: 83.5% !important;
+        margin-left: 10px;
+    }
+
+    .collateralType {
+        width: 65% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 54% !important;
+        margin-left: 10px;
+    }
+
+    .lab {
+        margin-left: -100px;
+    }
+
+    .accountType {
+        width: 50% !important;
+        margin-left: 10px;
+    }
+
+    .fullName {
+        width: 72.5% !important;
+        margin-left: 10px;
+    }
+
+    .accountNumber {
+        width: 50% !important;
+        margin-left: 10px;
+    }
+
+    .ifscCode {
+        width: 80% !important;
+        margin-left: 10px;
+    }
+
+    .bankName {
+        width: 66% !important;
+        margin-left: 10px;
+    }
+
+    .textarea {
+        font-size: 13px;
+        border-radius: 9px;
+    }
+
+    .saveInlineButton {
+        padding: 9px 28px;
+        font-size: 13px;
+        border-radius: 9px;
+    }
+
+    .exportInlineButton {
+        padding: 9px 28px;
+        width: 130px;
+        font-size: 13px;
+    }
+
+    .collapsedSection {
+        height: 45px;
+        padding: 18px 20px;
+        border-radius: 14px;
+    }
+
+    .collapsedTitle {
+        font-size: 15px;
+    }
+
+    .collapsedRight {
+        gap: 45px;
+    }
+
+    .statusPending,
+    .statusComplete {
+        font-size: 15px;
+    }
+
+    .loanId {
+        width: 33% !important;
+        margin-left: 10px;
+    }
+
+    .loanreq {
+        width: 65% !important;
+        margin-left: 10px;
+    }
+
+    .interestType {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .interestRate {
+        width: 38%;
+        margin-left: 10px;
+    }
+
+    .tenureType {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .tenure {
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    .startDate {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .endDate {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .emiDate {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    /* loan emiCalculator */
+    .emiCalculator {
+        width: 100% !important;
+        padding: 20px;
+        border-top: 0.5px solid rgba(115, 119, 145, 0.5);
+        background-color: var(--bg-color);
+    }
+
+    .emiCalculatorContent {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .emiCalculatorContents {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .emiCalculatorAmount {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .emiCalculatorLabel {
+        font-size: 14px;
+        line-height: 100%;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .emiCalculatorValue {
+        padding: 14px 14px;
+        gap: 10px;
+        border-radius: 10px;
+        background-color: var(--btn-color);
+        font-size: 14px;
+        line-height: 100%;
+        font-weight: 600;
+        color: var(--bg-color);
+    }
+
+    .error {
+        font-size: 11px;
+    }
+}
+
+/* 1000px Screen */
+@media (max-width: 1000px) {
+    .container {
+        padding: 16px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 20px;
+        gap: 12px;
+    }
+
+    .headerButtons {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .backButton {
+        width: auto !important;
+        padding: 9px 16px;
+        font-size: 13px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+
+    .draftButton,
+    .saveButton,
+    .generateButton {
+        flex: 1;
+        min-width: 90px;
+    }
+
+    .draftButton,
+    .saveButton {
+        width: auto;
+        padding: 9px 6px !important;
+        font-size: 11px;
+        border-radius: 12px;
+    }
+
+    .generateButton {
+        width: auto;
+        padding: 7px 8px !important;
+        font-size: 11px;
+        border-radius: 12px;
+    }
+
+    .content {
+        gap: 14px;
+    }
+
+    .section {
+        border-radius: 12px;
+    }
+
+    .sectionHeader {
+        padding: 8px 16px;
+    }
+
+    .sectionTitle {
+        font-size: 14px;
+    }
+
+    .toggleIcon {
+        font-size: 18px;
+    }
+
+    .sectionContent {
+        padding: 12px 16px 16px 16px;
+        gap: 16px;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .label {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    .input,
+    .select {
+        height: 36px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .textarea {
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .formActions {
+        gap: 10px;
+    }
+
+    .collateralType {
+        width: 83% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 71% !important;
+        margin-left: 10px;
+    }
+
+    .lab {
+        margin-left: 0px;
+    }
+
+    .accountType {
+        width: 84% !important;
+        margin-left: 10px;
+    }
+
+    .fullName {
+        width: 69.2% !important;
+        margin-left: 10px;
+    }
+
+    .accountNumber {
+        width: 80.3% !important;
+        margin-left: 10px;
+    }
+
+    .ifscCode {
+        width: 93% !important;
+        margin-left: 10px;
+    }
+
+    .bankName {
+        width: 86% !important;
+        margin-left: 10px;
+    }
+
+    .saveInlineButton {
+        padding: 8px 24px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .exportInlineButton {
+        padding: 8px 24px;
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .resetButton {
+        padding: 8px;
+        border-radius: 7px;
+    }
+
+    .resetIcon {
+        font-size: 16px;
+    }
+
+    .collapsedSection {
+        height: 42px;
+        padding: 16px 16px;
+        border-radius: 12px;
+    }
+
+    .collapsedTitle {
+        font-size: 14px;
+    }
+
+    .collapsedRight {
+        gap: 35px;
+    }
+
+    .statusPending,
+    .statusComplete {
+        font-size: 14px;
+    }
+
+    .occupationType {
+        width: 80.5% !important;
+        margin-left: 10px;
+    }
+
+    .companyName {
+        width: 70.2% !important;
+        margin-left: 10px;
+    }
+
+    .monthlyIncome {
+        width: 81% !important;
+        margin-left: 10px;
+    }
+
+    .companyAddress {
+        width: 78.5% !important;
+        margin-left: 10px;
+    }
+
+    .loanId {
+        width: 90.5% !important;
+        margin-left: 10px;
+    }
+
+    .loanreq {
+        width: 75% !important;
+        margin-left: 10px;
+    }
+
+    .interestType {
+        width: 84.8%;
+        margin-left: 10px;
+    }
+
+    .interestRate {
+        width: 81.4%;
+        margin-left: 10px;
+    }
+
+    .tenureType {
+        width: 85.5%;
+        margin-left: 10px;
+    }
+
+    .tenure {
+        width: 91%;
+        margin-left: 10px;
+    }
+
+    .startDate {
+        width: 87.6%;
+        margin-left: 10px;
+    }
+
+    .endDate {
+        width: 89%;
+        margin-left: 10px;
+    }
+
+    .emiDate {
+        width: 89.1%;
+        margin-left: 10px;
+    }
+
+    /* loan emiCalculator */
+    .emiCalculator {
+        width: 100% !important;
+        padding: 20px 10px 20px 10px;
+        border-top: 0.5px solid rgba(115, 119, 145, 0.5);
+        background-color: var(--bg-color);
+    }
+
+    .emiCalculatorContent {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .emiCalculatorContents {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .emiCalculatorAmount {
+        display: flex;
+        gap: 5px;
+    }
+
+    .emiCalculatorLabel {
+        font-size: 12px;
+        line-height: 100%;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .emiCalculatorValue {
+        padding: 12px 12px;
+        gap: 6px;
+        border-radius: 10px;
+        background-color: var(--btn-color);
+        font-size: 12px;
+        line-height: 100%;
+        font-weight: 500;
+        color: var(--bg-color);
+    }
+}
+
+/* 800px Screen */
+@media (max-width: 800px) {
+    .container {
+        padding: 14px;
+    }
+
+    .header {
+        margin-bottom: 16px;
+        gap: 10px;
+    }
+
+    .headerButtons {
+        gap: 8px;
+    }
+
+    .backButton {
+        padding: 8px 14px;
+        font-size: 12px;
+        gap: 8px;
+        border-radius: 10px;
+    }
+
+    .draftButton,
+    .saveButton {
+        padding: 8px 5px !important;
+        font-size: 10px;
+        border-radius: 10px;
+        min-width: 80px;
+    }
+
+    .generateButton {
+        padding: 6px 6px !important;
+        font-size: 10px;
+        border-radius: 10px;
+    }
+
+    .content {
+        gap: 12px;
+    }
+
+    .section {
+        border-radius: 10px;
+    }
+
+    .sectionHeader {
+        padding: 7px 14px;
+    }
+
+    .sectionTitle {
+        font-size: 13px;
+    }
+
+    .toggleIcon {
+        font-size: 16px;
+    }
+
+    .sectionContent {
+        padding: 10px 14px 14px 14px;
+        gap: 14px;
+    }
+
+    .label {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .input,
+    .select {
+        height: 34px;
+        padding: 0 8px;
+        font-size: 13px;
+        border-radius: 7px;
+    }
+
+    .occupationType {
+        width: 76.5% !important;
+        margin-left: 10px;
+    }
+
+    .companyName {
+        width: 64.2% !important;
+        margin-left: 10px;
+    }
+
+    .monthlyIncome {
+        width: 78% !important;
+        margin-left: 10px;
+    }
+
+    .companyAddress {
+        width: 74.5% !important;
+        margin-left: 10px;
+    }
+
+    .collateralType {
+        width: 79.2% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 65% !important;
+        margin-left: 10px;
+    }
+
+    .accountType {
+        width: 80.5% !important;
+        margin-left: 10px;
+    }
+
+    .fullName {
+        width: 63.2% !important;
+        margin-left: 10px;
+    }
+
+    .accountNumber {
+        width: 76.5% !important;
+        margin-left: 10px;
+    }
+
+    .ifscCode {
+        width: 92% !important;
+        margin-left: 10px;
+    }
+
+    .bankName {
+        width: 83% !important;
+        margin-left: 10px;
+    }
+
+    .textarea {
+        padding: 0 8px;
+        font-size: 11px;
+        border-radius: 7px;
+    }
+
+    .formActions {
+        gap: 8px;
+    }
+
+    .saveInlineButton {
+        padding: 7px 20px;
+        font-size: 11px;
+        border-radius: 7px;
+    }
+
+    .exportInlineButton {
+        padding: 7px 20px;
+        width: 100%;
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .resetButton {
+        padding: 7px;
+        border-radius: 6px;
+    }
+
+    .resetIcon {
+        font-size: 4px !important;
+    }
+
+    .collapsedSection {
+        height: 38px;
+        padding: 14px 14px;
+        border-radius: 10px;
+    }
+
+    .collapsedTitle {
+        font-size: 13px;
+    }
+
+    .collapsedRight {
+        gap: 25px;
+    }
+
+    .statusPending,
+    .statusComplete {
+        font-size: 13px;
+    }
+
+    .error {
+        font-size: 10px;
+        margin-left: 8px;
+    }
+
+    .loanId {
+        width: 88.5% !important;
+        margin-left: 10px;
+    }
+
+    .loanreq {
+        width: 70% !important;
+        margin-left: 10px;
+    }
+
+    .interestType {
+        width: 81.5%;
+        margin-left: 10px;
+    }
+
+    .interestRate {
+        width: 77.4%;
+        margin-left: 10px;
+    }
+
+    .tenureType {
+        width: 82.5%;
+        margin-left: 10px;
+    }
+
+    .tenure {
+        width: 91%;
+        margin-left: 10px;
+    }
+
+    .startDate {
+        width: 84.6%;
+        margin-left: 10px;
+    }
+
+    .endDate {
+        width: 86%;
+        margin-left: 10px;
+    }
+
+    .emiDate {
+        width: 86.1%;
+        margin-left: 10px;
+    }
+
+    /* loan emiCalculator */
+    .emiCalculator {
+        width: 100% !important;
+        padding: 20px 10px 20px 10px;
+        border-top: 0.5px solid rgba(115, 119, 145, 0.5);
+        background-color: var(--bg-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start
+    }
+
+    .emiCalculatorContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .emiCalculatorContents {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .emiCalculatorAmount {
+        display: flex;
+        gap: 5px;
+    }
+
+    .emiCalculatorLabel {
+        font-size: 12px;
+        line-height: 100%;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .emiCalculatorValue {
+        padding: 12px 12px;
+        gap: 6px;
+        border-radius: 10px;
+        background-color: var(--btn-color);
+        font-size: 12px;
+        line-height: 100%;
+        font-weight: 500;
+        color: var(--bg-color);
+    }
+}
+
+/* 600px Screen */
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+
+    .header {
+        margin-bottom: 14px;
+        gap: 8px;
+    }
+
+    .headerButtons {
+        gap: 6px;
+        justify-content: space-between;
+    }
+
+    .backButton {
+        padding: 7px 12px;
+        font-size: 11px;
+        gap: 6px;
+        border-radius: 8px;
+    }
+
+    .draftButton,
+    .saveButton {
+        padding: 7px 4px !important;
+        font-size: 9px;
+        border-radius: 8px;
+        min-width: 70px;
+    }
+
+    .generateButton {
+        padding: 5px 4px !important;
+        font-size: 9px;
+        border-radius: 8px;
+        white-space: normal;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+    .section {
+        border-radius: 8px;
+    }
+
+    .sectionHeader {
+        padding: 6px 12px;
+    }
+
+    .sectionTitle {
+        font-size: 12px;
+    }
+
+    .toggleIcon {
+        font-size: 14px;
+    }
+
+    .sectionContent {
+        padding: 8px 12px 12px 12px;
+        gap: 12px;
+    }
+
+    .label {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+
+    .input,
+    .select {
+        height: 32px;
+        padding: 0 6px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+
+    .occupationType {
+        width: 68.5% !important;
+        margin-left: 10px;
+    }
+
+    .companyName {
+        width: 51.2% !important;
+        margin-left: 10px;
+    }
+
+    .monthlyIncome {
+        width: 69% !important;
+        margin-left: 10px;
+    }
+
+    .companyAddress {
+        width: 64.5% !important;
+        margin-left: 10px;
+    }
+
+    .collateralType {
+        width: 71% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 51.9% !important;
+        margin-left: 10px;
+    }
+
+    .accountType {
+        width: 73.4% !important;
+        margin-left: 10px;
+    }
+
+    .fullName {
+        width: 49% !important;
+        margin-left: 10px;
+    }
+
+    .accountNumber {
+        width: 68.5% !important;
+        margin-left: 10px;
+    }
+
+    .ifscCode {
+        width: 93% !important;
+        margin-left: 10px;
+    }
+
+    .bankName {
+        width: 77% !important;
+        margin-left: 10px;
+    }
+
+    .textarea {
+        padding: 0 6px;
+        font-size: 10px;
+        border-radius: 6px;
+    }
+
+    .saveInlineButton {
+        padding: 6px 16px;
+        font-size: 10px;
+        border-radius: 6px;
+    }
+
+    .exportInlineButton {
+        padding: 6px 16px;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .resetButton {
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    .resetIcon {
+        font-size: 12px;
+    }
+
+    .collapsedSection {
+        height: 35px;
+        padding: 12px 12px;
+        border-radius: 8px;
+    }
+
+    .collapsedTitle {
+        font-size: 12px;
+    }
+
+    .collapsedRight {
+        gap: 18px;
+    }
+
+    .statusPending,
+    .statusComplete {
+        font-size: 12px;
+    }
+
+    .error {
+        font-size: 9px;
+        margin-left: 6px;
+    }
+
+    .loanId {
+        width: 83.5% !important;
+        margin-left: 10px;
+    }
+
+    .loanreq {
+        width: 59% !important;
+        margin-left: 10px;
+    }
+
+    .interestType {
+        width: 74.5%;
+        margin-left: 10px;
+    }
+
+    .interestRate {
+        width: 69.4%;
+        margin-left: 10px;
+    }
+
+    .tenureType {
+        width: 75.5%;
+        margin-left: 10px;
+    }
+
+    .tenure {
+        width: 91%;
+        margin-left: 10px;
+    }
+
+    .startDate {
+        width: 79.6%;
+        margin-left: 10px;
+    }
+
+    .endDate {
+        width: 81%;
+        margin-left: 10px;
+    }
+
+    .emiDate {
+        width: 81.1%;
+        margin-left: 10px;
+    }
+
+}
+
+/* 400px Screen */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        margin-bottom: 12px;
+        gap: 6px;
+    }
+
+    .headerButtons {
+        gap: 5px;
+    }
+
+    .backButton {
+        padding: 6px 10px;
+        font-size: 10px;
+        gap: 5px;
+        border-radius: 6px;
+    }
+
+    .draftButton,
+    .saveButton {
+        padding: 6px 3px !important;
+        font-size: 8px;
+        border-radius: 6px;
+        min-width: 60px;
+    }
+
+    .generateButton {
+        padding: 4px 3px !important;
+        font-size: 8px;
+        border-radius: 6px;
+    }
+
+    .content {
+        gap: 8px;
+    }
+
+    .section {
+        border-radius: 6px;
+    }
+
+    .sectionHeader {
+        padding: 5px 10px;
+    }
+
+    .sectionTitle {
+        font-size: 11px;
+    }
+
+    .toggleIcon {
+        font-size: 12px;
+    }
+
+    .sectionContent {
+        padding: 6px 10px 10px 10px;
+        gap: 10px;
+    }
+
+    .label {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+
+    .input,
+    .select {
+        height: 28px;
+        padding: 0 5px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+
+    .collateralType {
+        width: 77.4% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 63.4% !important;
+        margin-left: 10px;
+    }
+
+    .accountType {
+        width: 75.2% !important;
+        margin-left: 10px;
+    }
+
+    .fullName {
+        width: 54% !important;
+        margin-left: 10px;
+    }
+
+    .accountNumber {
+        width: 70.5% !important;
+        margin-left: 10px;
+    }
+
+    .ifscCode {
+        width: 93% !important;
+        margin-left: 10px;
+    }
+
+    .bankName {
+        width: 79% !important;
+        margin-left: 10px;
+    }
+
+    .textarea {
+        padding: 0 5px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+
+    .saveInlineButton {
+        padding: 5px 12px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+
+    .exportInlineButton {
+        padding: 5px 12px;
+        font-size: 9px;
+        margin-bottom: 4px;
+    }
+
+    .resetButton {
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .resetIcon {
+        font-size: 10px;
+    }
+
+    .collapsedSection {
+        height: 32px;
+        padding: 10px 10px;
+        border-radius: 6px;
+    }
+
+    .collapsedTitle {
+        font-size: 11px;
+    }
+
+    .collapsedRight {
+        gap: 12px;
+    }
+
+    .statusPending,
+    .statusComplete {
+        font-size: 11px;
+    }
+
+    .error {
+        font-size: 8px;
+        margin-left: 5px;
+    }
+}
+
+/* 200px Screen - Extreme Mobile */
+@media (max-width: 360px) {
+    .container {
+        padding: 6px;
+    }
+
+    .header {
+        margin-bottom: 8px;
+        gap: 4px;
+    }
+
+    .headerButtons {
+        gap: 3px;
+        flex-direction: column;
+    }
+
+    .backButton {
+        padding: 4px 6px;
+        font-size: 8px;
+        gap: 3px;
+        border-radius: 4px;
+    }
+
+    .draftButton,
+    .saveButton {
+        padding: 4px 2px !important;
+        font-size: 7px;
+        border-radius: 4px;
+        min-width: 50px;
+    }
+
+    .generateButton {
+        padding: 3px 2px !important;
+        font-size: 7px;
+        border-radius: 4px;
+    }
+
+    .content {
+        gap: 6px;
+    }
+
+    .section {
+        border-radius: 4px;
+    }
+
+    .sectionHeader {
+        padding: 4px 6px;
+    }
+
+    .sectionTitle {
+        font-size: 9px;
+    }
+
+    .toggleIcon {
+        font-size: 10px;
+    }
+
+    .sectionContent {
+        padding: 4px 6px 6px 6px;
+        gap: 6px;
+    }
+
+    .label {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+
+    .input,
+    .select {
+        height: 22px;
+        padding: 0 3px;
+        font-size: 10px;
+        border-radius: 3px;
+    }
+
+    .textarea {
+        padding: 0 3px;
+        font-size: 7px;
+        border-radius: 3px;
+    }
+
+    .collateralType {
+        width: 71.4% !important;
+        margin-left: 10px;
+    }
+
+    .collateralValue {
+        width: 52.4% !important;
+        margin-left: 10px;
+    }
+
+    .formActions {
+        gap: 4px;
+    }
+
+    .saveInlineButton {
+        padding: 3px 8px;
+        font-size: 7px;
+        border-radius: 3px;
+    }
+
+    .exportInlineButton {
+        padding: 3px 8px;
+        font-size: 7px;
+        margin-bottom: 3px;
+    }
+
+    .resetButton {
+        padding: 3px;
+        border-radius: 3px;
+    }
+
+    .resetIcon {
+        font-size: 8px;
+    }
+
+    .collapsedSection {
+        height: 26px;
+        padding: 6px 6px;
+        border-radius: 4px;
+    }
+
+    .collapsedTitle {
+        font-size: 9px;
+    }
+
+    .collapsedRight {
+        gap: 8px;
+    }
+
+    .statusPending,
+    .statusComplete {
+        font-size: 9px;
+    }
+
+    .error {
+        font-size: 6px;
+        margin-left: 3px;
+    }
+}

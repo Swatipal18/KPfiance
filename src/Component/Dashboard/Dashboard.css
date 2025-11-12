@@ -1,0 +1,754 @@
+/* Container Styles */
+.container {
+    background-color: var(--bg-color);
+    margin-top: 25px;
+}
+
+/* Header Styles */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px !important;
+}
+
+.overview {
+    width: 687px;
+    height: 290px !important;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    padding: 18px !important;
+    border: 1px solid #F8F9FA;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--title-color);
+    line-height: 20px !important;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--light-text-color);
+    margin: 4px 0 0 0;
+}
+
+.exportBtn {
+    width: 80px;
+    height: 40px;
+    background-color: var(--bg-color);
+    color: var(--export-text);
+    padding: 10px 5px;
+    border: 1px solid #C3D3E2;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exportBtn:hover {
+    background-color: #C3D3E2;
+    color: var(--bg-color);
+}
+
+/* Cards Grid */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+/* Card Styles */
+.card {
+    width: 147px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none !important;
+    position: relative;
+}
+
+.cardPink {
+    background-color: var(--text-bg-red-color);
+}
+
+.cardOrange {
+    background-color: var(--text-bg-yellow-color);
+}
+
+.cardGreen {
+    background-color: var(--text-bg-green-color);
+}
+
+.cardPurple {
+    background-color: var(--text-bg-purple-color);
+}
+
+.cardIcon {
+    width: 40px;
+    height: 40px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardIconPink {
+    background-color: var(--icon-bg-red);
+}
+
+.cardIconOrange {
+    background-color: var(--icon-bg-yellow);
+}
+
+.cardIconGreen {
+    background-color: var(--icon-bg-green);
+}
+
+.cardIconPurple {
+    background-color: var(--icon-bg-purple);
+}
+
+.cardValue {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 8px 0;
+}
+
+.cardLabel {
+    font-size: 16px;
+    font-style: medium;
+    font-weight: 500;
+    color: var(--total-text);
+    line-height: 24px;
+}
+
+/* Charts Grid */
+.chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+}
+
+.chartCard {
+    height: 290px;
+    width: 530px;
+    background-color: var(--bg-color);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chartCards {
+    height: 300px;
+    width: 530px;
+    background-color: var(--bg-color);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chartTitle {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--title-color);
+    margin: 0 0 13px 0;
+}
+
+
+/* Table Styles */
+.table {
+    height: 300px;
+    width: 687px;
+    background-color: var(--bg-color);
+    margin-right: 20px;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.tableTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--table-title);
+    line-height: 140%;
+    margin: 0 0 16px 0;
+}
+
+.tableContent {
+    width: 100%;
+    max-width: 687px;
+    ;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+
+.th {
+    text-align: left;
+    padding: 12px;
+    color: var(--table-header);
+    font-weight: 700;
+    font-size: 10px;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.td-dashboard {
+    width: 100px;
+    padding: 12px;
+    color: var(--table-title);
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.overdue {
+    color: #F64E60;
+    font-weight: 600;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #EDF2F6;
+}
+
+
+.row-left {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.row-id {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--table-text);
+    min-width: 3rem;
+}
+
+.row-label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--table-text);
+}
+
+.row-value {
+    border-radius: 8px;
+    border: 1px solid;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    min-width: 130px;
+    height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Color variants */
+.row-value.blue {
+    border-color: var(--amount-blue);
+    background-color: var(--amount-bg-blue);
+    color: var(--amount-blue);
+}
+
+.row-value.green {
+    border-color: var(--amount-green);
+    background-color: var(--amount-bg-green);
+    color: var(--amount-green);
+}
+
+.row-value.purple {
+    border-color: var(--amount-purple);
+    background-color: var(--amount-bg-purple);
+    color: var(--amount-purple);
+}
+
+.row-value.orange {
+    border-color: var(--amount-yellow);
+    background-color: var(--amount-bg-yellow);
+    color: var(--amount-yellow);
+}
+
+
+
+/* Scrollbar styling */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ============================================ */
+/* RESPONSIVE MEDIA QUERIES */
+/* ============================================ */
+
+/* 1400px to 1200px */
+@media (max-width: 1400px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px !important;
+    }
+
+    .overview {
+        width: 100%;
+        max-width: 660px;
+    }
+
+    .chartCard {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: repeat(1);
+        gap: 15px;
+    }
+
+    .chartsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .chartCards {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* 1200px to 1000px */
+@media (max-width: 1200px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 20px !important;
+    }
+
+    .overview {
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    .chartCard {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* 1000px to 900px */
+@media (max-width: 1000px) {
+    .container {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .chartsGrid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .cardValue {
+        font-size: 18px;
+    }
+
+    .cardLabel {
+        font-size: 14px;
+    }
+
+    .chartTitle {
+        font-size: 18px;
+    }
+}
+
+/* 900px to 800px */
+@media (max-width: 900px) {
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .chartCard,
+    .chartCards {
+        padding: 15px;
+        height: auto;
+    }
+
+    .table {
+        padding: 15px;
+        height: auto;
+    }
+
+    .th {
+        font-size: 9px;
+        padding: 10px 8px;
+    }
+
+    .td-dashboard {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+}
+
+/* 800px to 700px */
+@media (max-width: 800px) {
+
+    .cardsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tableContent {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .tableContent table {
+        min-width: 500px;
+    }
+}
+
+/* 700px to 600px */
+@media (max-width: 700px) {
+    .container {
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+
+    .overview,
+    .chartCard,
+    .chartCards,
+    .table {
+        border-radius: 10px;
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .cardValue {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cardLabel {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .chartTitle,
+    .tableTitle {
+        font-size: 16px;
+    }
+
+    .row-value {
+        min-width: 100px;
+        font-size: 12px;
+    }
+}
+
+/* 600px to 500px */
+@media (max-width: 600px) {
+    .cardsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    .cardIcon {
+        width: 35px;
+        height: 35px !important;
+    }
+
+    .cardValue {
+        font-size: 15px;
+        margin: 6px 0;
+    }
+
+    .cardLabel {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .th {
+        font-size: 8px;
+        padding: 8px 6px;
+    }
+
+    .td-dashboard {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+
+    .row-label {
+        font-size: 12px;
+    }
+}
+
+/* 500px to 300px */
+@media (max-width: 500px) {
+    .container {
+        margin-top: 10px;
+        padding: 0 8px;
+    }
+
+    .dashboard {
+        gap: 15px !important;
+    }
+
+    .chartsGrid {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .overview,
+    .chartCard,
+    .chartCards,
+    .table {
+        padding: 10px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        margin-top: 0;
+    }
+
+    .cardIcon {
+        width: 40px;
+        height: 40px !important;
+        flex-shrink: 0;
+    }
+
+    .cardValue {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .cardLabel {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+
+    .chartTitle,
+    .tableTitle {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .tableContent {
+        font-size: 11px;
+    }
+
+    .th {
+        font-size: 8px;
+        padding: 6px 4px;
+    }
+
+    .td-dashboard {
+        font-size: 10px;
+        padding: 6px 4px;
+        width: auto;
+    }
+
+    .table-row {
+        padding: 10px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .row-left {
+        width: 100%;
+    }
+
+    .row-value {
+        width: 100%;
+        min-width: unset;
+        font-size: 11px;
+    }
+
+    .row-label {
+        font-size: 11px;
+    }
+}
+
+/* 300px to 200px (Extra Small Devices) */
+@media (max-width: 300px) {
+    .container {
+        margin-top: 8px;
+        padding: 0 5px;
+    }
+
+    .overview,
+    .chartCard,
+    .chartCards,
+    .table {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .title {
+        font-size: 13px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .exportBtn {
+        height: 32px;
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .card {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .cardIcon {
+        width: 32px;
+        height: 32px !important;
+    }
+
+    .cardValue {
+        font-size: 14px;
+    }
+
+    .cardLabel {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .chartTitle,
+    .tableTitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .th {
+        font-size: 7px;
+        padding: 5px 3px;
+    }
+
+    .td-dashboard {
+        font-size: 9px;
+        padding: 5px 3px;
+    }
+
+    .table-row {
+        padding: 8px 6px;
+    }
+
+    .row-id {
+        font-size: 10px;
+        min-width: 2rem;
+    }
+
+    .row-label {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .row-value {
+        font-size: 10px;
+        height: 20px;
+        padding: 6px;
+    }
+}

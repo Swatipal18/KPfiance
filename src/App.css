@@ -1,0 +1,82 @@
+:root {
+  --bg-color: #FFFFFF;
+  --text:#000000;
+  --text-color: #151D48;
+  --light-text-color: #737791;
+  --title-color: #05004E;
+  --title-bg-color: #222B45;
+  --search-bg-color: #EEF7FF;
+  --notification-color: #F64E60;
+  --text-bg-orange-color: #FFFAF1;
+  --text-bg-blue-color: #D4E9FF;
+  --text-bg-red-color: #FFE2E5;
+  --text-bg-yellow-color: #FFF4DE;
+  --text-bg-green-color: #DCFCE7;
+  --text-bg-purple-color: #F3E8FF;
+  --icon-bg-red: #FA5A7D;
+  --icon-bg-yellow: #FF947A;
+  --icon-bg-green: #3CD856;
+  --icon-bg-purple: #BF83FF;
+  --table-header: #A0AEC0;
+  --table-title: #2D3748;
+  --table-text: #444A6D;
+  --amount-bg-blue: #F0F9FF;
+  --amount-blue: #0095FF;
+  --amount-bg-green: #F0FDF4;
+  --amount-bg-purple: #FBF1FF;
+  --amount-purple: #884DFF;
+  --amount-bg-yellow: #FEF6E6;
+  --amount-yellow: #FF8900;
+  --amount-green: #00E58F;
+  --text-green: #00E096;
+  --text-purple: #8950FC;
+  --card-bg: rgba(115, 119, 145, 0.15);
+  --btn-color: #5D5FEF;
+  --export-text: #0F3659;
+  --diabled-btn-bg: #9596FF;
+  --total-text: #425166;
+  
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('./assets/fonts/static/Urbanist-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color, #FFFFFF) !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  overflow-x: hidden;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row !important;
+  height: 100vh;
+  background-color: var(--bg-color, #FFFFFF) !important;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+content {
+  flex: 1;
+  padding: 2rem;
+}

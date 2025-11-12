@@ -1,0 +1,85 @@
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Modal Content */
+.modalContent {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Modal Close Button */
+.modalCloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--notification-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: background-color 0.3s;
+}
+
+.modalCloseButton:hover {
+    background-color: var(--icon-bg-red);
+}
+
+/* Modal Image */
+.modalImage {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Modal PDF Container */
+.modalPdfContainer {
+    text-align: center;
+    padding: 40px;
+}
+
+.modalPdfIcon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.modalPdfName {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* PDF Open Link */
+.pdfOpenLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 16px;
+    transition: background-color 0.3s;
+}
+
+.pdfOpenLink:hover {
+    background-color: var(--btn-color);
+}

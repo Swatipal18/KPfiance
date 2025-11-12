@@ -1,0 +1,1219 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.modalContent {
+    background-color: var(--bg-color, #FFFFFF);
+    width: 100%;
+    max-width: 1260px;
+    border-radius: 12px 0 0 12px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Header Section */
+.modalHeader {
+    flex-shrink: 0;
+    height: 135px;
+    padding: 9px 32px;
+    border-bottom: 1px solid var(--light-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.headerLeft {
+    width: 27% !important;
+}
+
+.headerLeft h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 8px 0;
+    letter-spacing: 0%;
+    line-height: 1.4;
+}
+
+.headerLeft p {
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 8px 0;
+    letter-spacing: 2%;
+    line-height: 100%;
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40% !important;
+}
+
+.kycSection {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.kycStatus {
+    border: 2px solid rgba(93, 95, 239, 1);
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 12px 24px;
+    color: var(--btn-color);
+    background-color: rgba(93, 95, 239, 0.21);
+}
+
+.activeLoans {
+    border: 2px solid rgba(0, 224, 150, 1);
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 12px 24px;
+    color: var(--text-green);
+    background-color: rgba(0, 224, 150, 0.2);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.closeButton:hover {
+    color: #111827;
+}
+
+.modalbody {
+    height: 672px;
+    padding: 20px 32px 20px 32px;
+}
+
+/* Status Section */
+.statusSection {
+    border: 0.5px solid rgba(115, 119, 145, 0.5);
+    border-radius: 0px 16px 16px 16px;
+    height: 472px;
+    overflow: hidden;
+    padding: 0 0px 20px 0px;
+}
+
+.statusBadge {
+    display: inline-block;
+    border: 2px solid#00E096;
+    border-radius: 16px 16px 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 34px;
+    color: black;
+    background-color: #00E09666;
+    margin-left: 12px;
+    letter-spacing: 0.01em;
+}
+
+.quickInfo {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    border-radius: 8px;
+}
+
+.quickInfo span {
+    padding: 10px 16.8px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-right: 0.5px solid #737791;
+    border-bottom: 0.5px solid #737791;
+    font-weight: 600;
+    color: #111827;
+    font-size: 14px;
+}
+
+.quickInfo span:last-child {
+    color: var(--text-green);
+    border-right: none;
+}
+
+.quickInfo span strong {
+    color: #111827;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
+/* Tabs Section */
+.tabContainer {
+    display: flex;
+    padding: 10px 20px;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.tab {
+    border: 1px solid #5D5FEF;
+    border-radius: 16px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5D5FEF;
+    margin-bottom: -1px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.tab.active {
+    color: var(--bg-color);
+    background-color: #5D5FEF;
+    font-weight: 600;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 17px;
+    background-color: rgba(93, 95, 239, 0.15);
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Modal Body */
+.modalBody {
+    width: 97%;
+    height: 320px;
+    margin-left: 20px;
+    margin-top: 7px;
+    overflow-y: auto;
+    border: 0.5px solid #737791;
+    border-radius: 16px;
+}
+
+/* Loan Details Content */
+.detailsContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 20px;
+    border-bottom: 0.5px solid rgba(115, 119, 145, 1);
+}
+
+.detailRow.lastRow {
+    border-bottom: none;
+}
+
+.detailRow .label {
+    font-size: 15px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.detailRow .value {
+    font-size: 15px;
+    color: #111827;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* EMI Schedule Content */
+.emiContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.emiSummary {
+    display: flex;
+    border-radius: 8px;
+}
+
+.summaryItem {
+    width: fit-content;
+    padding: 10px 11px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.summaryLabel {
+    font-size: 15.5px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.summaryValue {
+    font-size: 15.5px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* EMI Table */
+.tableWrapper {
+    overflow-x: auto;
+    border: 1px solid rgba(115, 119, 145, 1);
+    border-radius: 18px;
+    width: 62%;
+    height: 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.emiTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.emiTable th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.emiTable tbody tr {
+    transition: background-color 0.2s;
+}
+
+.emiTable tbody tr:hover {
+    background-color: #fafafa;
+}
+
+.emiTable tbody tr:last-child {
+    border-bottom: none;
+}
+
+.emiTable td {
+    padding: 8px 14px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Status Badge in Table */
+.status {
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.status.paid {
+    color: var(--text-green);
+}
+
+.status.overdue {
+    color: var(--notification-color);
+}
+
+/* Scrollbar Styling */
+.modalBody::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modalBody::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+.modalBody::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.modalBody::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* 1400px Screen */
+@media (max-width: 1400px) {
+    .modalContent {
+        max-width: 1100px;
+    }
+
+    .modalHeader {
+        height: 130px;
+        padding: 8px 28px;
+        gap: 35px;
+    }
+
+    .headerLeft h2 {
+        font-size: 17px;
+    }
+
+    .headerLeft p {
+        font-size: 12px;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 12px;
+        padding: 11px 22px;
+    }
+
+    .modalbody {
+        height: 650px;
+        padding: 18px 28px;
+    }
+
+    .statusSection {
+        height: 460px;
+    }
+
+    .statusBadge {
+        font-size: 13px;
+        padding: 11px 32px;
+    }
+
+    .quickInfo span {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+
+    .tabContainer {
+        gap: 25px;
+        padding: 9px 18px;
+    }
+
+    .tab {
+        font-size: 13px;
+        padding: 11px 18px;
+    }
+
+    .modalBody {
+        height: 310px;
+        margin-left: 18px;
+    }
+
+    .tableWrapper {
+        width: 65%;
+        height: 240px;
+    }
+}
+
+/* 1200px Screen */
+@media (max-width: 1200px) {
+    .modalContent {
+        max-width: 950px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .modalHeader {
+        height: 120px;
+        padding: 8px 24px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerLeft {
+        width: 100% !important;
+    }
+
+    .headerLeft h2 {
+        font-size: 16px;
+    }
+
+    .headerLeft p {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .headerRight {
+        width: 100% !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .kycSection {
+        margin-top: 0;
+        gap: 8px;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 11px;
+        padding: 10px 20px;
+        border-radius: 14px;
+    }
+
+    .closeButton {
+        width: 28px;
+        height: 28px;
+    }
+
+    .modalbody {
+        height: 600px;
+        padding: 16px 24px;
+    }
+
+    .statusSection {
+        height: 440px;
+        border-radius: 0 14px 14px 14px;
+    }
+
+    .statusBadge {
+        font-size: 12px;
+        padding: 10px 28px;
+        border-radius: 14px 14px 0 0;
+    }
+
+    .quickInfo span {
+        font-size: 12px;
+        padding: 8px 13px;
+    }
+
+    .tabContainer {
+        gap: 20px;
+        padding: 8px 16px;
+        margin-top: 16px;
+    }
+
+    .tab {
+        font-size: 12px;
+        padding: 10px 16px;
+        border-radius: 14px;
+    }
+
+    .tab.active::after {
+        top: 42px;
+        width: 90px;
+        height: 15px;
+    }
+
+    .modalBody {
+        width: 98%;
+        height: 290px;
+        margin-left: 16px;
+        border-radius: 14px;
+    }
+
+    .detailRow {
+        padding: 4px 16px;
+    }
+
+    .detailRow .label,
+    .detailRow .value {
+        font-size: 14px;
+    }
+
+    .summaryItem {
+        padding: 9px 10px;
+        gap: 5px;
+    }
+
+    .summaryLabel,
+    .summaryValue {
+        font-size: 14px;
+    }
+
+    .tableWrapper {
+        width: 70%;
+        height: 220px;
+        border-radius: 16px;
+        margin-left: 8px;
+    }
+
+    .emiTable th,
+    .emiTable td {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .status {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+/* 1000px Screen */
+@media (max-width: 1000px) {
+    .modalOverlay {
+        justify-content: center;
+    }
+
+    .modalContent {
+        max-width: 95%;
+        border-radius: 12px;
+    }
+
+    .modalHeader {
+        height: auto;
+        padding: 12px 20px;
+        gap: 16px;
+    }
+
+    .headerLeft h2 {
+        font-size: 15px;
+    }
+
+    .headerLeft p {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .headerRight {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .kycSection {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 10px;
+        padding: 8px 16px;
+        border-radius: 12px;
+    }
+
+    .closeButton {
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+
+    .modalbody {
+        height: auto;
+        padding: 14px 20px;
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .statusSection {
+        height: auto;
+        min-height: 400px;
+        border-radius: 0 12px 12px 12px;
+    }
+
+    .statusBadge {
+        font-size: 11px;
+        padding: 9px 24px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .quickInfo {
+        width: 100%;
+    }
+
+    .quickInfo span {
+        font-size: 11px;
+        padding: 7px 10px;
+        flex: 1 1 45%;
+    }
+
+    .tabContainer {
+        gap: 15px;
+        padding: 8px 14px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        font-size: 11px;
+        padding: 9px 14px;
+        border-radius: 12px;
+    }
+
+    .tab.active::after {
+        display: none;
+    }
+
+    .modalBody {
+        width: 96%;
+        height: 280px;
+        margin-left: 14px;
+        border-radius: 12px;
+    }
+
+    .detailRow {
+        padding: 4px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .detailRow .label,
+    .detailRow .value {
+        font-size: 13px;
+    }
+
+    .emiSummary {
+        flex-wrap: wrap;
+    }
+
+    .summaryItem {
+        padding: 8px 9px;
+        flex: 1 1 45%;
+    }
+
+    .summaryLabel,
+    .summaryValue {
+        font-size: 13px;
+    }
+
+    .tableWrapper {
+        width: 95%;
+        height: 200px;
+        margin-left: 6px;
+    }
+
+    .emiTable th,
+    .emiTable td {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* 800px Screen */
+@media (max-width: 800px) {
+    .modalContent {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .modalHeader {
+        padding: 10px 16px;
+        gap: 12px;
+    }
+
+    .headerLeft h2 {
+        font-size: 14px;
+    }
+
+    .headerLeft p {
+        font-size: 9px;
+        margin-bottom: 4px;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 9px;
+        padding: 7px 14px;
+        border-radius: 10px;
+    }
+
+    .closeButton {
+        width: 24px;
+        height: 24px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .modalbody {
+        padding: 12px 16px;
+    }
+
+    .statusSection {
+        min-height: 350px;
+        border-radius: 0 10px 10px 10px;
+    }
+
+    .statusBadge {
+        font-size: 10px;
+        padding: 8px 20px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .quickInfo span {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    .tabContainer {
+        gap: 10px;
+        padding: 6px 12px;
+        margin-top: 12px;
+    }
+
+    .tab {
+        font-size: 10px;
+        padding: 8px 12px;
+        border-radius: 10px;
+    }
+
+    .modalBody {
+        width: 94%;
+        height: 250px;
+        margin-left: 12px;
+        border-radius: 10px;
+    }
+
+    .detailRow {
+        padding: 3px 12px;
+    }
+
+    .detailRow .label,
+    .detailRow .value {
+        font-size: 12px;
+    }
+
+    .summaryItem {
+        padding: 7px 8px;
+        flex: 1 1 100%;
+    }
+
+    .summaryLabel,
+    .summaryValue {
+        font-size: 12px;
+    }
+
+    .tableWrapper {
+        width: 98%;
+        height: 180px;
+        border-radius: 12px;
+        margin-left: 4px;
+    }
+
+    .emiTable th,
+    .emiTable td {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .status {
+        font-size: 9px;
+        padding: 2px 6px;
+        border-radius: 8px;
+    }
+}
+
+/* 600px Screen */
+@media (max-width: 600px) {
+    .modalHeader {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .headerLeft h2 {
+        font-size: 13px;
+    }
+
+    .headerLeft p {
+        font-size: 8px;
+        margin-bottom: 3px;
+    }
+
+    .kycSection {
+        gap: 5px;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 8px;
+        padding: 6px 12px;
+        border-radius: 8px;
+    }
+
+    .closeButton {
+        width: 22px;
+        height: 22px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .modalbody {
+        padding: 10px 12px;
+    }
+
+    .statusSection {
+        min-height: 300px;
+        border-radius: 0 8px 8px 8px;
+        padding: 0 0 15px 0;
+    }
+
+    .statusBadge {
+        font-size: 9px;
+        padding: 7px 16px;
+        border-radius: 8px 8px 0 0;
+        margin-left: 8px;
+    }
+
+    .quickInfo span {
+        font-size: 9px;
+        padding: 5px 6px;
+        flex: 1 1 100%;
+    }
+
+    .tabContainer {
+        gap: 8px;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+    .tab {
+        font-size: 9px;
+        padding: 7px 10px;
+        border-radius: 8px;
+        flex: 1;
+    }
+
+    .modalBody {
+        width: 92%;
+        height: 220px;
+        margin-left: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+    }
+
+    .detailRow {
+        padding: 3px 10px;
+    }
+
+    .detailRow .label,
+    .detailRow .value {
+        font-size: 11px;
+    }
+
+    .summaryItem {
+        padding: 6px 7px;
+        gap: 4px;
+    }
+
+    .summaryLabel,
+    .summaryValue {
+        font-size: 11px;
+    }
+
+    .tableWrapper {
+        width: 100%;
+        height: 160px;
+        border-radius: 10px;
+        margin-left: 2px;
+        margin-top: 8px;
+    }
+
+    .emiTable th,
+    .emiTable td {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .status {
+        font-size: 8px;
+        padding: 2px 5px;
+    }
+
+    .modalBody::-webkit-scrollbar {
+        width: 4px;
+    }
+}
+
+/* 400px Screen */
+@media (max-width: 400px) {
+    .modalHeader {
+        padding: 6px 10px;
+        gap: 8px;
+    }
+
+    .headerLeft h2 {
+        font-size: 12px;
+    }
+
+    .headerLeft p {
+        font-size: 7px;
+        margin-bottom: 2px;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 7px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .closeButton {
+        width: 20px;
+        height: 20px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .modalbody {
+        padding: 8px 10px;
+    }
+
+    .statusSection {
+        min-height: 280px;
+        border-radius: 0 6px 6px 6px;
+        padding: 0 0 12px 0;
+    }
+
+    .statusBadge {
+        font-size: 8px;
+        padding: 6px 12px;
+        border-radius: 6px 6px 0 0;
+        margin-left: 6px;
+        border-width: 1px;
+    }
+
+    .quickInfo span {
+        font-size: 8px;
+        padding: 4px 5px;
+    }
+
+    .tabContainer {
+        gap: 6px;
+        padding: 4px 8px;
+        margin-top: 8px;
+    }
+
+    .tab {
+        font-size: 8px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border-width: 0.5px;
+    }
+
+    .modalBody {
+        width: 90%;
+        height: 200px;
+        margin-left: 8px;
+        margin-top: 4px;
+        border-radius: 6px;
+        border-width: 0.5px;
+    }
+
+    .detailRow {
+        padding: 2px 8px;
+    }
+
+    .detailRow .label,
+    .detailRow .value {
+        font-size: 10px;
+    }
+
+    .summaryItem {
+        padding: 5px 6px;
+        gap: 3px;
+    }
+
+    .summaryLabel,
+    .summaryValue {
+        font-size: 10px;
+    }
+
+    .tableWrapper {
+        height: 140px;
+        border-radius: 8px;
+        margin-top: 6px;
+        border-width: 0.5px;
+    }
+
+    .emiTable th,
+    .emiTable td {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+
+    .status {
+        font-size: 7px;
+        padding: 2px 4px;
+        border-radius: 6px;
+    }
+}
+
+/* 200px Screen - Extreme Mobile */
+@media (max-width: 200px) {
+    .modalHeader {
+        padding: 4px 6px;
+        gap: 6px;
+    }
+
+    .headerLeft h2 {
+        font-size: 10px;
+    }
+
+    .headerLeft p {
+        font-size: 6px;
+        margin-bottom: 2px;
+    }
+
+    .headerRight {
+        width: 100% !important;
+    }
+
+    .kycSection {
+        flex-direction: column;
+        gap: 3px;
+        width: 100%;
+    }
+
+    .kycStatus,
+    .activeLoans {
+        font-size: 6px;
+        padding: 3px 6px;
+        border-radius: 4px;
+        border-width: 1px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .closeButton {
+        width: 16px;
+        height: 16px;
+        top: 4px;
+        right: 4px;
+    }
+
+    .modalbody {
+        padding: 6px 6px;
+    }
+
+    .statusSection {
+        min-height: 250px;
+        border-radius: 0 4px 4px 4px;
+        padding: 0 0 8px 0;
+        border-width: 0.5px;
+    }
+
+    .statusBadge {
+        font-size: 7px;
+        padding: 4px 8px;
+        border-radius: 4px 4px 0 0;
+        margin-left: 4px;
+        border-width: 1px;
+    }
+
+    .quickInfo span {
+        font-size: 7px;
+        padding: 3px 4px;
+        border-width: 0.5px;
+    }
+
+    .tabContainer {
+        gap: 4px;
+        padding: 3px 6px;
+        margin-top: 6px;
+        flex-direction: column;
+    }
+
+    .tab {
+        font-size: 7px;
+        padding: 4px 6px;
+        border-radius: 4px;
+        border-width: 0.5px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .modalBody {
+        width: 88%;
+        height: 180px;
+        margin-left: 6px;
+        margin-top: 3px;
+        border-radius: 4px;
+        border-width: 0.5px;
+    }
+
+    .detailRow {
+        padding: 2px 6px;
+        border-width: 0.5px;
+    }
+
+    .detailRow .label,
+    .detailRow .value {
+        font-size: 8px;
+    }
+
+    .summaryItem {
+        padding: 4px 5px;
+        gap: 2px;
+    }
+
+    .summaryLabel,
+    .summaryValue {
+        font-size: 8px;
+    }
+
+    .tableWrapper {
+        height: 120px;
+        border-radius: 6px;
+        margin-top: 4px;
+        margin-left: 1px;
+        border-width: 0.5px;
+    }
+
+    .emiTable th,
+    .emiTable td {
+        font-size: 7px;
+        padding: 2px 3px;
+    }
+
+    .status {
+        font-size: 6px;
+        padding: 1px 3px;
+        border-radius: 4px;
+    }
+
+    .modalBody::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .modalBody::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+    }
+}

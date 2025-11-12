@@ -1,0 +1,675 @@
+.formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.label {
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+/* File Upload Label Button */
+.uploadLabel {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: var(--bg-color);
+    border: 0.5px solid rgba(115, 119, 145, 1);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 100%;
+    font-weight: 400;
+    color: var(--light-text-color);
+    transition: all 0.2s;
+}
+
+/* Preview Box Container */
+.previewBox {
+    width: 100%;
+    height: 180px;
+    background-color: rgba(115, 119, 145, 0.15);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.previewBox:hover {
+    border-color: #999;
+}
+
+/* Preview Image */
+.previewImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* PDF Preview */
+.pdfPreview {
+    text-align: center;
+}
+
+.pdfIcon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.pdfName {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Remove Button */
+.removeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--notification-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.removeButton:hover {
+    background-color: var(--icon-bg-red);
+}
+
+/* Empty Preview State */
+.emptyPreview {
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+
+/* File Input Hidden */
+.fileInput {
+    display: none;
+
+}
+
+/* Upload Container */
+.uploadContainer {
+    width: 100%;
+}
+
+.uploadBox {
+    display: flex;
+}
+
+.uploadButtonWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.multiplePreview {
+    min-height: 150px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.previewGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.previewItem {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.previewItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.previewItem .previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previewItem .pdfPreview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.previewItem .pdfIcon {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.previewItem .pdfName {
+    font-size: 10px;
+    text-align: center;
+    padding: 0 5px;
+    word-break: break-word;
+    max-height: 30px;
+    overflow: hidden;
+}
+
+.previewItem .removeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.previewItem .removeButton:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* 1400px Screen */
+@media (max-width: 1400px) {
+    .label {
+        font-size: 13.5px;
+        margin-top: 14px;
+    }
+
+    .uploadLabel {
+        padding: 7px 15px;
+        font-size: 14.5px;
+    }
+
+    .previewBox {
+        height: 170px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+        gap: 9px;
+    }
+}
+
+/* 1200px Screen */
+@media (max-width: 1200px) {
+    .label {
+        font-size: 13px;
+        margin-top: 13px;
+    }
+
+    .uploadLabel {
+        padding: 7px 14px;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+
+    .previewBox {
+        height: 160px;
+        border-radius: 14px;
+    }
+
+    .pdfIcon {
+        font-size: 44px;
+    }
+
+    .pdfName {
+        font-size: 13px;
+    }
+
+    .removeButton {
+        width: 28px;
+        height: 28px;
+        font-size: 17px;
+    }
+
+    .emptyPreview {
+        font-size: 17px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .previewItem .pdfIcon {
+        font-size: 30px;
+    }
+}
+
+/* 1000px Screen */
+@media (max-width: 1000px) {
+    .label {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+    .uploadLabel {
+        padding: 6px 12px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .uploadButtonWrapper {
+        margin-bottom: 8px;
+    }
+
+    .previewBox {
+        height: 150px;
+        border-radius: 12px;
+    }
+
+    .pdfIcon {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    .pdfName {
+        font-size: 12px;
+    }
+
+    .removeButton {
+        width: 26px;
+        height: 26px;
+        font-size: 16px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .emptyPreview {
+        font-size: 16px;
+    }
+
+    .multiplePreview {
+        min-height: 140px;
+        max-height: 350px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .previewItem {
+        border-radius: 7px;
+    }
+
+    .previewItem .pdfIcon {
+        font-size: 28px;
+    }
+
+    .previewItem .pdfName {
+        font-size: 9px;
+    }
+}
+
+/* 800px Screen */
+@media (max-width: 800px) {
+    .formGroup {
+        flex-direction: column;
+    }
+
+    .label {
+        font-size: 11px;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    .uploadLabel {
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+    .uploadButtonWrapper {
+        margin-bottom: 7px;
+    }
+
+    .previewBox {
+        height: 140px;
+        border-radius: 11px;
+    }
+
+    .pdfIcon {
+        font-size: 36px;
+        margin-bottom: 7px;
+    }
+
+    .pdfName {
+        font-size: 11px;
+    }
+
+    .removeButton {
+        width: 24px;
+        height: 24px;
+        font-size: 15px;
+        top: 7px;
+        right: 7px;
+    }
+
+    .emptyPreview {
+        font-size: 15px;
+    }
+
+    .multiplePreview {
+        min-height: 130px;
+        max-height: 300px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .previewItem {
+        border-radius: 6px;
+    }
+
+    .previewItem .pdfIcon {
+        font-size: 26px;
+        margin-bottom: 4px;
+    }
+
+    .previewItem .pdfName {
+        font-size: 8px;
+        max-height: 25px;
+    }
+
+    .previewItem .removeButton {
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+        top: 4px;
+        right: 4px;
+    }
+}
+
+/* 600px Screen */
+@media (max-width: 600px) {
+    .label {
+        font-size: 10px;
+        margin-top: 8px;
+        margin-bottom: 3px;
+    }
+
+    .uploadLabel {
+        padding: 4px 8px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+
+    .uploadButtonWrapper {
+        margin-bottom: 6px;
+    }
+
+    .previewBox {
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    .pdfIcon {
+        font-size: 32px;
+        margin-bottom: 6px;
+    }
+
+    .pdfName {
+        font-size: 10px;
+    }
+
+    .removeButton {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .emptyPreview {
+        font-size: 13px;
+    }
+
+    .multiplePreview {
+        min-height: 110px;
+        max-height: 250px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .previewItem {
+        border-radius: 5px;
+    }
+
+    .previewItem .pdfIcon {
+        font-size: 22px;
+        margin-bottom: 3px;
+    }
+
+    .previewItem .pdfName {
+        font-size: 7px;
+        max-height: 20px;
+    }
+
+    .previewItem .removeButton {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        top: 3px;
+        right: 3px;
+    }
+}
+
+/* 400px Screen */
+@media (max-width: 400px) {
+    .label {
+        font-size: 9px;
+        margin-top: 6px;
+        margin-bottom: 2px;
+    }
+
+    .uploadLabel {
+        padding: 3px 6px;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+
+    .uploadButtonWrapper {
+        margin-bottom: 5px;
+    }
+
+    .previewBox {
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .pdfIcon {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .pdfName {
+        font-size: 9px;
+    }
+
+    .removeButton {
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .emptyPreview {
+        font-size: 11px;
+    }
+
+    .multiplePreview {
+        min-height: 90px;
+        max-height: 200px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .previewItem {
+        border-radius: 4px;
+    }
+
+    .previewItem .pdfIcon {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .previewItem .pdfName {
+        font-size: 6px;
+        max-height: 16px;
+    }
+
+    .previewItem .removeButton {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        top: 2px;
+        right: 2px;
+    }
+}
+
+/* 200px Screen - Extreme Mobile */
+@media (max-width: 200px) {
+    .label {
+        font-size: 7px;
+        margin-top: 4px;
+        margin-bottom: 2px;
+        margin-right: 2px;
+    }
+
+    .uploadLabel {
+        padding: 2px 4px;
+        font-size: 8px;
+        border-radius: 4px;
+    }
+
+    .uploadButtonWrapper {
+        margin-bottom: 4px;
+    }
+
+    .uploadBox {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .previewBox {
+        height: 70px;
+        border-radius: 6px;
+    }
+
+    .pdfIcon {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+
+    .pdfName {
+        font-size: 7px;
+    }
+
+    .removeButton {
+        width: 16px;
+        height: 16px;
+        font-size: 11px;
+        top: 3px;
+        right: 3px;
+    }
+
+    .emptyPreview {
+        font-size: 9px;
+    }
+
+    .multiplePreview {
+        min-height: 70px;
+        max-height: 150px;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+        gap: 3px;
+        padding: 3px;
+    }
+
+    .previewItem {
+        border-radius: 3px;
+        border-width: 0.5px;
+    }
+
+    .previewItem:hover {
+        transform: scale(1.02);
+    }
+
+    .previewItem .pdfIcon {
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+
+    .previewItem .pdfName {
+        font-size: 5px;
+        max-height: 12px;
+        padding: 0 2px;
+    }
+
+    .previewItem .removeButton {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+        top: 2px;
+        right: 2px;
+    }
+}
